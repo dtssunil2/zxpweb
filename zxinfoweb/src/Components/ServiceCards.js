@@ -19,9 +19,9 @@ const ServiceCards = () => {
                 >
                   <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
                   <div class="py-2 px-9 relative  ">
-                    <FaUserTie className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
+                    <FaUserTie className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
                     <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                     Business Research
+                      Business Research
                     </h3>
                     <p class="mt-4 text-base text-gray-600 group-hover:text-white  ">
                       Amet minim mollit non deserunt ullamco est sit aliqua
@@ -37,10 +37,10 @@ const ServiceCards = () => {
                 >
                   <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
                   <div class="py-2 px-9 relative  ">
-                    <TiChartPie className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
+                    <TiChartPie className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
 
                     <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                       Stretagic Planning
+                      Stretagic Planning
                     </h3>
                     <p class="mt-4 text-base text-gray-600 group-hover:text-white">
                       Amet minim mollit non deserunt ullamco est sit aliqua
@@ -56,10 +56,9 @@ const ServiceCards = () => {
                 >
                   <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
                   <div class="py-2 px-9 relative  ">
-                   
-                    <FaMagnifyingGlassChart className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
+                    <FaMagnifyingGlassChart className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
                     <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                       Market Analysis
+                      Market Analysis
                     </h3>
                     <p class="mt-4 text-base text-gray-600 group-hover:text-white">
                       Amet minim mollit non deserunt ullamco est sit aliqua
@@ -74,27 +73,9 @@ const ServiceCards = () => {
                 >
                   <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
                   <div class="py-2 px-9 relative  ">
-                    <FaChartArea  className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
+                    <FaChartArea className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
                     <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                        Financial Analaysis
-                    </h3>
-                    <p class="mt-4 text-base text-gray-600 group-hover:text-white">
-                      Amet minim mollit non deserunt ullamco est sit aliqua
-                      dolor do amet sint. Velit officia consequat duis enim
-                      velit mollit.
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="#"
-                  class="transition-all  duration-1000 bg-white hover:bg-blue-500  hover:shadow-xl m-2 p-4 relative z-40 group  "
-                >
-                  <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
-                  <div class="py-2 px-9 relative  ">
-                    <FaBalanceScaleLeft  className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
-                    <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                       legal Advisory
+                      Financial Analaysis
                     </h3>
                     <p class="mt-4 text-base text-gray-600 group-hover:text-white">
                       Amet minim mollit non deserunt ullamco est sit aliqua
@@ -110,9 +91,27 @@ const ServiceCards = () => {
                 >
                   <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
                   <div class="py-2 px-9 relative  ">
-                    <FaHouseChimneyCrack  className="w-16 h-16 fill-gray-400 group-hover:fill-white"/>
+                    <FaBalanceScaleLeft className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
                     <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
-                       Tax & Insurance
+                      legal Advisory
+                    </h3>
+                    <p class="mt-4 text-base text-gray-600 group-hover:text-white">
+                      Amet minim mollit non deserunt ullamco est sit aliqua
+                      dolor do amet sint. Velit officia consequat duis enim
+                      velit mollit.
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all  duration-1000 bg-white hover:bg-blue-500  hover:shadow-xl m-2 p-4 relative z-40 group  "
+                >
+                  <div class=" absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  "></div>
+                  <div class="py-2 px-9 relative  ">
+                    <FaHouseChimneyCrack className="w-16 h-16 fill-gray-400 group-hover:fill-white" />
+                    <h3 class="mt-8 text-lg font-semibold text-black group-hover:text-white ">
+                      Tax & Insurance
                     </h3>
                     <p class="mt-4 text-base text-gray-600 group-hover:text-white">
                       Amet minim mollit non deserunt ullamco est sit aliqua

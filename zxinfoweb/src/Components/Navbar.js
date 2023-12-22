@@ -11,8 +11,8 @@ const Navbar = () => {
         <div>
           <a href="#" className="flex items-center   gap-4 ">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
+              src="https://i.postimg.cc/8kJbKPrr/zxinfotech-high-resolution-logo-transparent.png"
+              className="h-10"
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
@@ -55,9 +55,7 @@ const Navbar = () => {
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
                 Pages{" "}
-               
               </button>
-              {/* <!-- Dropdown menu --> */}
               <div
                 id="dropdownNavbar"
                 className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"

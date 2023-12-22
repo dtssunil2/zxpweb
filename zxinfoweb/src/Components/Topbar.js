@@ -16,15 +16,15 @@ const Topbar = () => {
       </div>
 
       <div className="topbar-right mr-28   ">
-        <ul className=" flex gap-5" >
-            <li className="flex gap-2 items-center " >
-                 <AiTwotoneMail  className="text-xl "/>
-                 <h1>info@example.com</h1>
-            </li>
-            <li className="flex gap-2 items-center">
-            <IoCallOutline className="text-xl"/>
+        <ul className=" flex gap-5">
+          <li className="flex gap-2 items-center ">
+            <AiTwotoneMail className="text-xl " />
+            <h1>info@example.com</h1>
+          </li>
+          <li className="flex gap-2 items-center">
+            <IoCallOutline className="text-xl" />
             <h1>+012 345 6789</h1>
-            </li>
+          </li>
         </ul>
       </div>
     </div>

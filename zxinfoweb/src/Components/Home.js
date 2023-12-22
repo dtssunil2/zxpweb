@@ -8,7 +8,9 @@ import Services from "./Services";
 import Features from "./Features";
 import Quotes from "./Quotes";
 import Team from "./Team";
-
+import Testimonial from "./Testimonials";
+import Blog from "./Blog";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -20,8 +22,10 @@ const Home = () => {
       <Services />
       <Features />
       <Quotes />
-      <Team/>
-    
+      <Team />
+      <Testimonial />
+      <Blog />
+      <Footer />
     </>
   );
 };
