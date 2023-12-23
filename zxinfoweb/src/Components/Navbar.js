@@ -11,7 +11,7 @@ const Navbar = () => {
         <div>
           <a href="#" className="flex items-center   gap-4 ">
             <img
-              src="https://i.postimg.cc/8kJbKPrr/zxinfotech-high-resolution-logo-transparent.png"
+              src="https://i.postimg.cc/4xhX5wht/zxpinfotech-high-resolution-logo-transparent.png"
               className="h-10"
               alt="Flowbite Logo"
             />

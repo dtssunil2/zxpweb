@@ -13,7 +13,7 @@ const Footer = () => {
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <img
-                src="https://i.postimg.cc/8kJbKPrr/zxinfotech-high-resolution-logo-transparent.png"
+                src="https://i.postimg.cc/4xhX5wht/zxpinfotech-high-resolution-logo-transparent.png"
                 class="mr-5 h-36 sm:h-36"
                 alt="logo"
               />
