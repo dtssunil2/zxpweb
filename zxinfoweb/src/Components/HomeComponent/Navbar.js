@@ -2,14 +2,26 @@ import React, { useState } from "react";
 import NavbarNavigation from "./NavbarNavigation";
 import { CiMenuFries } from "react-icons/ci";
 import { SlClose } from "react-icons/sl";
+import { Link  ,NavLink} from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  //for page toggle dropdown
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleItemClick = () => {
+    // Handle item click logic here
+    setIsOpen(false);
+  };
   return (
     <nav className="bg-white  h-20  border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 ">
         <div>
-          <a href="#" className="flex items-center   gap-4 ">
+          <Link to="/" className="flex items-center gap-4 ">
             <img
               src="https://i.postimg.cc/4xhX5wht/zxpinfotech-high-resolution-logo-transparent.png"
               className="h-10"
@@ -18,7 +30,7 @@ const Navbar = () => {
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               ZXPINFOTECH
             </span>
-          </a>
+          </Link>
         </div>
 
         {toggle ? (
@@ -32,21 +44,21 @@ const Navbar = () => {
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           />
         )}
+
         <NavbarNavigation />
 
         <div
-          className={` w-full  md:hidden ${toggle ? "block" : " hidden"}`}
+          className={` w-full  md:hidden ${toggle ? "block relative z-10" : " hidden"}` }
           id="navbar-dropdown"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              <NavLink
+                className={()=>`block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent`}
                 aria-current="page"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
               <button
