@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <div
           className={` w-full  md:hidden ${
-            toggle ? "block relative z-10" : " hidden"
+            toggle ? "block relative z-50" : "hidden"
           }`}
           id="navbar-dropdown"
         >
