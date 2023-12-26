@@ -12,6 +12,7 @@ import ContactComponent from "./Components/ContactComponent/ContactComponent";
 import PageComponent from "./Components/PageComponent/PageComponent";
 import ServiceComponent from "./Components/ServiceComponent/ServiceComponent";
 import InfoPageComponent from "./Components/AboutComponent/InfoPageComponent";
+import PricingComponent from "./Components/PricingComponent/PricingComponent";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="services" element={<ServiceComponent />}>
         <Route path="infopage" element={<InfoPageComponent />} />
       </Route>
+      <Route path="pricing" element={<PricingComponent />} />
     </Route>
   )
 );

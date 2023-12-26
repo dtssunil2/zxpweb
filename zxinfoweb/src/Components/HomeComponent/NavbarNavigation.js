@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Dropdown from "../HeaderComponent/Dropdown";
 const NavbarNavigation = () => {
   return (
@@ -8,7 +8,11 @@ const NavbarNavigation = () => {
         <li>
           <NavLink
             to="/"
-            className={({isActive})=>`block py-2 px-3 text-white ${isActive ? "sm:text-blue-500" :"sm:text-white"}  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`}
+            className={({ isActive }) =>
+              `block py-2 px-3 text-white ${
+                isActive ? "sm:text-blue-500" : "sm:text-white"
+              }  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`
+            }
             aria-current="page"
           >
             Home
@@ -67,13 +71,17 @@ const NavbarNavigation = () => {
           </div>
         </li> */}
         <li>
-        <Dropdown/>
+          <Dropdown />
         </li>
         <li>
           <NavLink
-           to="/services"
+            to="/services"
             // className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            className={({isActive})=>`block py-2 px-3 text-white ${isActive ? "sm:text-blue-500" :"sm:text-white"}  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`}
+            className={({ isActive }) =>
+              `block py-2 px-3 text-white ${
+                isActive ? "sm:text-blue-500" : "sm:text-white"
+              }  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`
+            }
           >
             Services
           </NavLink>
@@ -82,7 +90,11 @@ const NavbarNavigation = () => {
           <NavLink
             to="about"
             // className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            className={({isActive})=>`block py-2 px-3 text-white ${isActive ? "sm:text-blue-500" :"sm:text-white"}  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`}
+            className={({ isActive }) =>
+              `block py-2 px-3 text-white ${
+                isActive ? "sm:text-blue-500" : "sm:text-white"
+              }  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`
+            }
           >
             About
           </NavLink>
@@ -91,9 +103,25 @@ const NavbarNavigation = () => {
           <NavLink
             to="contact"
             // className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            className={({isActive})=>`block py-2 px-3 text-white ${isActive ? "sm:text-blue-500" :"sm:text-white"}  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`}
+            className={({ isActive }) =>
+              `block py-2 px-3 text-white ${
+                isActive ? "sm:text-blue-500" : "sm:text-white"
+              }  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`
+            }
           >
             Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="pricing"
+            className={({ isActive }) =>
+              `block py-2 px-3 text-white ${
+                isActive ? "sm:text-blue-500" : "sm:text-white"
+              }  rounded md:bg-transparent md: md:p-0 md:  md:dark:bg-transparent  md:hover:text-blue-700 md:dark:hover:text-blue-500`
+            }
+          >
+            Pricing
           </NavLink>
         </li>
       </ul>

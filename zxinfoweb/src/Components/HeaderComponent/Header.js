@@ -1,14 +1,14 @@
-import React from 'react'
-import Topbar from '../HomeComponent/Topbar'
-import Navbar from '../HomeComponent/Navbar'
+import React from "react";
+import Topbar from "../HomeComponent/Topbar";
+import Navbar from "../HomeComponent/Navbar";
 
 const Header = () => {
   return (
     <>
-       <Topbar/>
-       <Navbar/>
+      <Topbar />
+      <Navbar />
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
