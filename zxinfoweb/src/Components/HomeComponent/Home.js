@@ -9,11 +9,9 @@ import Team from "./Team";
 import Testimonial from "./Testimonials";
 import Blog from "./Blog";
 
-
 const Home = () => {
   return (
     <>
-   
       <Carousel slides={slides} />
       <About />
       <Services />
@@ -22,7 +20,6 @@ const Home = () => {
       <Team />
       <Testimonial />
       <Blog />
-    
     </>
   );
 };

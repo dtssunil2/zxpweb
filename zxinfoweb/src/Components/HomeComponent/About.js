@@ -4,7 +4,7 @@ import Design from "./Design";
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-1 lg:pt-[20px] lg:pb-[20px] bg-white dark:bg-dark ">
+      <section className="overflow-hidden pt-20 pb-1        md:w-full     lg:pt-[20px] lg:pb-[20px] bg-white dark:bg-dark ">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">

@@ -3,6 +3,8 @@ import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
+import Typed from "react-typed";
+
 function Carousel({ slides }) {
   let [current, setCurrent] = useState(0);
 
@@ -17,15 +19,23 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className="overflow-hidden relative h-auto">
+    <div className="overflow-hidden relative  h-auto">
       <div
-        className={`flex transition ease-out duration-40`}
+        className={`flex transition  ease-out duration-40`}
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
       >
-        {slides.map((s) => (
-          <img src={s} />
+        {slides.map((eachObj) => (
+          <>
+            <div
+              key={eachObj.id}
+              className="absolute left-[35%] w-[600px] h-32 top-1/2 text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 "
+            >
+              <Typed strings={[eachObj.text]} typeSpeed={100} loop={true} />
+            </div>
+            <img src={eachObj.img} />
+          </>
         ))}
       </div>
 

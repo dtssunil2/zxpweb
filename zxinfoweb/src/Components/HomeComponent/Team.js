@@ -3,7 +3,7 @@ import React from "react";
 const Team = () => {
   return (
     <>
-      <div className="flex flex-wrap -mx-3 mb-5">
+      <div className="flex flex-wrap mx-3 mb-5">
         <div className="w-full max-w-full px-3 mb-6  mx-auto">
           <div className="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem]  bg-white m-5">
             <div className="flex-auto block py-8 px-9">

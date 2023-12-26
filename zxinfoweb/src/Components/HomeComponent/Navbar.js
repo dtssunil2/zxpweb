@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import NavbarNavigation from "./NavbarNavigation";
 import { CiMenuFries } from "react-icons/ci";
 import { SlClose } from "react-icons/sl";
-import { Link  ,NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  //for page toggle dropdown
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleItemClick = () => {
-    // Handle item click logic here
     setIsOpen(false);
   };
   return (
-    <nav className="bg-white  h-20  border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <nav className="bg-white  h-20 sticky top-0  md:z-50 border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 ">
         <div>
           <Link to="/" className="flex items-center gap-4 ">
@@ -48,13 +46,17 @@ const Navbar = () => {
         <NavbarNavigation />
 
         <div
-          className={` w-full  md:hidden ${toggle ? "block relative z-10" : " hidden"}` }
+          className={` w-full  md:hidden ${
+            toggle ? "block relative z-10" : " hidden"
+          }`}
           id="navbar-dropdown"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <NavLink
-                className={()=>`block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent`}
+                className={() =>
+                  `block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent`
+                }
                 aria-current="page"
               >
                 Home
