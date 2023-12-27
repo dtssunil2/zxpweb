@@ -79,7 +79,7 @@ const Footer = () => {
               <div>
                 <p className="font-medium">Company</p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a href="about" className="hover:opacity-75" >
+                  <a href="about"  className="hover:opacity-75" >
                     {" "}
                     About{" "}
                   </a>
