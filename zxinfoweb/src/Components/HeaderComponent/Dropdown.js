@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate=useNavigate()
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleItemClick = (item) => {
+  const handleItemClick = () => {
     // Handle item click logic here
-    console.log(`Clicked on ${item}`);
+   navigate("pricing")
     setIsOpen(false);
   };
 
@@ -38,25 +39,26 @@ const Dropdown = () => {
             aria-labelledby="options-menu"
           >
             <button
-              onClick={() => handleItemClick('Dashboard')}
+              // onClick={() => handleItemClick('Dashboard')}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
               Dashboard
             </button>
             <button
-              onClick={() => handleItemClick('Settings')}
+              // onClick={() => handleItemClick('Settings')}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
               Settings
             </button>
             <button
-              onClick={() => handleItemClick('Earnings')}
+              
+              onClick={handleItemClick}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              Earnings
+              Pricing
             </button>
           </div>
         </div>

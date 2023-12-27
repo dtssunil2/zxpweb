@@ -4,6 +4,7 @@ import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { SlSocialLinkedin } from "react-icons/sl";
+import { Link, NavLink } from "react-router-dom";
  
 const Footer = () => {
   return (
@@ -78,7 +79,7 @@ const Footer = () => {
               <div>
                 <p className="font-medium">Company</p>
                 <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a className="hover:opacity-75" href>
+                  <a href="about" className="hover:opacity-75" >
                     {" "}
                     About{" "}
                   </a>
