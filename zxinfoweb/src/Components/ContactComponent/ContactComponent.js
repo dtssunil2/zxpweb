@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaMapMarker } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { TiSupport } from "react-icons/ti";
+import axios from "axios";
 const ContactComponent = () => {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      setEmailError("Please enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const onClickHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("api-endpoint", {
+        email: email,
+        subject: subject,
+        message: message,
+      });
+
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  };
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md ">
@@ -17,7 +47,7 @@ const ContactComponent = () => {
         <form action="#" className="space-y-8">
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Your email
@@ -25,10 +55,18 @@ const ContactComponent = () => {
             <input
               type="email"
               id="email"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onBlur={validateEmail}
+              className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light ${
+                emailError ? "border-red-500" : ""
+              }`}
               placeholder="name@gmail.com"
               required
             />
+            {emailError && (
+              <p className="text-red-500 text-sm mt-1">{emailError}</p>
+            )}
           </div>
           <div>
             <label
@@ -40,6 +78,8 @@ const ContactComponent = () => {
             <input
               type="text"
               id="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Let us know how we can help you"
               required
@@ -55,11 +95,16 @@ const ContactComponent = () => {
             <textarea
               id="message"
               rows="6"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Leave a comment..."
             ></textarea>
           </div>
-          <button className=' className="text-white bg-gradient-to-br ml-2 from-purple-600 to-blue-500 hover:bg-gradient-to-bl  focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"'>
+          <button
+            onClick={onClickHandler}
+            className=' className="text-white bg-gradient-to-br ml-2 from-purple-600 to-blue-500 hover:bg-gradient-to-bl  focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"'
+          >
             Send Message
           </button>
         </form>
