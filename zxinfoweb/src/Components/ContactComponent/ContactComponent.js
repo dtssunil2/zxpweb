@@ -23,7 +23,7 @@ const ContactComponent = () => {
   const onClickHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("api-endpoint", {
+      const response = await axios.post("http://localhost:6268/zxp/email", {
         email: email,
         subject: subject,
         message: message,
