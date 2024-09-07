@@ -6,7 +6,28 @@ import { CiGrid41 } from "react-icons/ci";
 import { GiSpeedometer } from "react-icons/gi";
 import { FaCubesStacked } from "react-icons/fa6";
 import { RxUpdate } from "react-icons/rx";
-
+import { FaNodeJs, FaJava, FaReact } from "react-icons/fa";
+import { SiNextdotjs, SiDotnet } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+const TechnologyCard = ({ icon, name }) => (
+  <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out cursor-pointer">
+    {icon}
+    <h3 className="mt-4 text-xl font-semibold text-gray-800">{name}</h3>
+  </div>
+);
+const TechnologyStack = () => (
+  <div className="mt-20">
+    <h2 className="text-3xl font-bold text-center mb-10">Our Technology Stack</h2>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <TechnologyCard icon={<FaNodeJs className="text-6xl text-green-600" />} name="Node.js" />
+      <TechnologyCard icon={<FaJava className="text-6xl text-red-500" />} name="Java" />
+      <TechnologyCard icon={<FaReact className="text-6xl text-blue-400" />} name="React" />
+      <TechnologyCard icon={<SiNextdotjs className="text-6xl text-black" />} name="Next.js" />
+      <TechnologyCard icon={<SiDotnet className="text-6xl text-purple-600" />} name=".NET" />
+      <TechnologyCard icon={<TbBrandCSharp className="text-6xl text-green-700" />} name="C#" />
+    </div>
+  </div>
+);
 const ServiceComponent = () => {
   return (
     <section className="pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]">
@@ -60,6 +81,8 @@ const ServiceComponent = () => {
             icon={<RxUpdate className="text-white text-3xl" />}
           />
         </div>
+
+        <TechnologyStack />
       </div>
     </section>
   );

@@ -6,93 +6,38 @@ import { IoIosHappy } from "react-icons/io";
 import { FaUserTie } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
 
+
+const FeatureCard = ({ Icon, title, description }) => (
+  <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
+    <div className="bg-blue-500 rounded-full flex items-center justify-center mb-4 w-16 h-16">
+      <Icon className="text-white text-3xl" />
+    </div>
+    <h3 className="text-xl font-bold mb-2 text-center">{title}</h3>
+    <p className="text-center text-gray-600">{description}</p>
+  </div>
+);
+
 const Features = () => {
+  const features = [
+    { Icon: IoMdTrophy, title: "Best In Industry", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+    { Icon: LuBadgePercent, title: "99% Success Rate", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+    { Icon: GiDiamondTrophy, title: "Award Winning", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+    { Icon: IoIosHappy, title: "100% Happy Client", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+    { Icon: FaUserTie, title: "Professional Advisors", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+    { Icon: RiCustomerService2Line, title: "24/7 Customer Support", description: "Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea" },
+  ];
+
   return (
-    <>
-      <div className=" flex flex-col w-full h-[400px]    ">
-        <div className="text-center text-3xl font-bold w-full ">
-          Why Choose Us!!!
-        </div>
-
-        <div className="min-h-screen   p-1  grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3  md:py-0">
-          <div className=" h-32  flex flex-col sm:h-48 md:mt-28 ">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <IoMdTrophy className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">Best In Industry</h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
-
-          <div className=" flex flex-col h-32 sm:h-48 md:mt-28">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <LuBadgePercent className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">99% Success Rate</h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
-
-          <div className="  flex flex-col  h-32 sm:h-48 md:mt-28">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <GiDiamondTrophy className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">Award Winning</h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
-
-          <div className="  flex flex-col h-32 sm:h-48 ">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <IoIosHappy className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">100% Happy Client</h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
-
-          <div className=" h-32  flex flex-col sm:h-48 mt-2 md:mt-0">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <FaUserTie className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">
-              Professional Advisors
-            </h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
-
-          <div className=" flex flex-col   h-32 sm:h-48 ">
-            <div className="bg-blue-500 rounded-full flex items-center mr-96 justify-center mb-3 w-16 h-16 mx-auto">
-              <RiCustomerService2Line className="text-white text-3xl" />
-            </div>
-
-            <h3 className="text-xl font-bold ml-5 mb-2">
-              24/7 Customer Support
-            </h3>
-            <p className="mb-0 ml-5">
-              Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos
-              diam et diam dolor ea
-            </p>
-          </div>
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <FeatureCard key={index} {...feature} />
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
